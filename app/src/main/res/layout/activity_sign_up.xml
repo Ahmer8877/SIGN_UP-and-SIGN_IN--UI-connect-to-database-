@@ -40,11 +40,13 @@
         android:layout_gravity="center">
 
         <com.google.android.material.textfield.TextInputEditText
+
             android:layout_width="360dp"
             android:layout_height="60dp"
+            android:id="@+id/line1"
             android:layout_gravity="center"
             android:background="@drawable/inputlaypoutdesign"
-            android:hint="NAME"
+            android:hint="UNIQUE ID"
             android:inputType="textPersonName"
             android:textColor="#000000"
             android:textStyle="bold"
@@ -62,6 +64,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="360dp"
             android:layout_height="60dp"
+            android:id="@+id/line2"
             android:layout_gravity="center"
             android:background="@drawable/inputlaypoutdesign"
             android:hint="EMAIL"
@@ -84,6 +87,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="360dp"
             android:layout_height="60dp"
+            android:id="@+id/line3"
             android:layout_gravity="center"
             android:background="@drawable/inputlaypoutdesign"
             android:hint="PASSWORD"

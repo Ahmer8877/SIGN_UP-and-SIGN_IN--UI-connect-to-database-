@@ -7,9 +7,12 @@ import androidx.appcompat.app.AppCompatActivity
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         //splash screen code
 
@@ -19,6 +22,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         },1000)
+
 
         }
     }
