@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sign_upUI">
         <activity
+            android:name=".welcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".signinactivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity

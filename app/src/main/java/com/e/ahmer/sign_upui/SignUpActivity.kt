@@ -1,8 +1,10 @@
 package com.e.ahmer.sign_upui
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -21,13 +23,15 @@ class SignUpActivity : AppCompatActivity() {
 
         //sign up button code
 
-        val signupbtn=findViewById<Button>(R.id.signupbtn)
+        val signupbtn=findViewById<TextView>(R.id.signupbtn)
+
 
     // text input layouts code
 
         val userid=findViewById<TextInputEditText>(R.id.line1)
         val email=findViewById<TextInputEditText>(R.id.line2)
         val password=findViewById<TextInputEditText>(R.id.line3)
+
 
         //signupbtn performance code
 
@@ -42,17 +46,27 @@ class SignUpActivity : AppCompatActivity() {
              val user= user(uniqueId, email, password)
 
             //database path code
+
             database= FirebaseDatabase.getInstance().getReference("Users")
 
-            //gets the id user and taost toast the masg success or failure
+            //gets the id user and taost toast the msg success or failure
             database.child(uniqueId).setValue(user).addOnSuccessListener {
-                Toast.makeText(this, "user registerd", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "user registered", Toast.LENGTH_SHORT).show()
             }.addOnFailureListener {
-                Toast.makeText(this,"Failuer", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Failure", Toast.LENGTH_SHORT).show()
             }
 
 
 
+        }
+
+             //explicit intent (sign in button code)
+
+        val signInButton=findViewById<TextView>(R.id.signinText)
+
+        signInButton.setOnClickListener {
+            val btnintent= Intent(this, signinactivity::class.java)
+            startActivity(btnintent)
         }
         }
     }

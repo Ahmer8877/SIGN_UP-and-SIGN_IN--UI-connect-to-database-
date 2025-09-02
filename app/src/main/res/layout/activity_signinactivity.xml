@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@drawable/gradientfile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signinactivity">
+
+
+    <TextView
+        android:id="@+id/welcometextsignin"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_margin="15dp"
+        android:text="WELCOME TO SIGN_IN PAGE"
+        android:textColor="#F2F276"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="360dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/inputlaypoutdesign">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:id="@+id/signinuserid"
+            android:textColor="#F2F276"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:hint="USER_ID:"
+            android:inputType="textPersonName"
+            tools:ignore="DuplicateIds" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/signinbtn"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"
+        android:text="SIGN_IN"
+        android:textSize="20sp"
+        android:backgroundTint="#763E2A"
+        android:textColor="@color/yellow"
+        tools:ignore="HardcodedText" />
+
+
+</LinearLayout>

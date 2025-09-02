@@ -109,4 +109,18 @@
         android:textSize="20sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/signinText"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#B1B154"
+        android:gravity="center"
+        android:text="If already exist please  ,SIGN_IN"
+        android:textColor="#6B4C4C"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
 </LinearLayout>
