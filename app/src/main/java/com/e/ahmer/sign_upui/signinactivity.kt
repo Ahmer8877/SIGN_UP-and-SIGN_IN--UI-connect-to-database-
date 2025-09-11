@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.e.ahmer.sign_upui.signinactivity.Companion.Key1
-import com.e.ahmer.sign_upui.signinactivity.Companion.Key3
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -16,11 +14,6 @@ class signinactivity : AppCompatActivity() {
     //database refference variable,initialize in below
     lateinit var databaseReference: DatabaseReference
 
-      //create companion oobject ,connect to the welcome activity
-    companion object{
-        const val Key1="com.e.ahmer.sign_upui.mail"
-        const val Key3="com.e.ahmer.sign_upui.password"
-    }
        //on create function
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,15 +69,12 @@ private fun signinactivity.readdata(uniqueId: String) {
         if (it.exists()){
             val email=it.child("email").value
             val password=it.child("password").value
+            val username=it.child("user name").value
 
             //welcome intent and open the welcome activity
 
-            val welocomeintent= Intent(this, welcomeActivity::class.java)
-
-              //work the companion object
-            welocomeintent.putExtra(Key1,email.toString())
-            welocomeintent.putExtra(Key3,password.toString())
-            startActivity(welocomeintent)
+            val welcomeintent= Intent(this, ContactActivity::class.java)
+            startActivity(welcomeintent)
 
 
         }else{

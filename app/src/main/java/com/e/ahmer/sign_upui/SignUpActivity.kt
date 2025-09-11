@@ -43,14 +43,14 @@ class SignUpActivity : AppCompatActivity() {
             //data class object
 
 
-             val user= user(uniqueId, email, password)
+             val User= user(uniqueId, email, password)
 
             //database path code
 
             database= FirebaseDatabase.getInstance().getReference("Users")
 
             //gets the id user and taost toast the msg success or failure
-            database.child(uniqueId).setValue(user).addOnSuccessListener {
+            database.child(uniqueId).setValue(User).addOnSuccessListener {
                 Toast.makeText(this, "user registered", Toast.LENGTH_SHORT).show()
             }.addOnFailureListener {
                 Toast.makeText(this,"Failure", Toast.LENGTH_SHORT).show()

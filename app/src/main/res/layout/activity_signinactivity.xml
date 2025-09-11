@@ -11,10 +11,10 @@
 
     <TextView
         android:id="@+id/welcometextsignin"
-        android:layout_width="380dp"
+        android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:layout_margin="15dp"
-        android:text="WELCOME TO SIGN_IN PAGE"
+        android:text="  SIGN_IN "
         android:textColor="#F2F276"
         android:textSize="35sp"
         android:textStyle="bold"
@@ -34,7 +34,8 @@
             android:textColor="#F2F276"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:hint="USER_ID:"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:hint=" USER_ID:"
             android:inputType="textPersonName"
             tools:ignore="DuplicateIds" />
     </com.google.android.material.textfield.TextInputLayout>

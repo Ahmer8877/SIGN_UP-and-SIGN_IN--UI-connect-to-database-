@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@drawable/gradientfile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactActivity">
+
+    <TextView
+        android:id="@+id/contacttextView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="ADD CONTACTS"
+        android:textSize="35sp"
+        android:textColor="#400808"
+        android:layout_margin="20dp"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        app:helperText="Required"
+        app:helperTextTextColor="@color/red"
+        android:background="@drawable/inputlaypoutdesign"
+        android:layout_marginTop="70dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneinput"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:hint="PHONE #"
+            android:inputType="number"
+            android:drawableStart="@drawable/baseline_phone_24"
+           android:textStyle="bold"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        app:helperText="Required"
+        app:helperTextTextColor="@color/red"
+        android:background="@drawable/inputlaypoutdesign"
+        android:layout_margin="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameinput"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:hint="NAME"
+            android:textStyle="bold"
+            android:inputType="textPersonName"
+            android:drawableStart="@drawable/baseline_person_24"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        app:helperText="Required"
+        app:helperTextTextColor="@color/red"
+        android:background="@drawable/inputlaypoutdesign">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailinput"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:hint=" EMAIL"
+            android:textStyle="bold"
+            android:inputType="textEmailAddress"
+            android:drawableStart="@drawable/baseline_email_24"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/Addbutton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="25dp"
+        android:text="ADD"
+        android:textStyle="bold"
+        android:backgroundTint="@drawable/inputlaypoutdesign"
+        android:textColor="@color/black"/>
+</LinearLayout>
