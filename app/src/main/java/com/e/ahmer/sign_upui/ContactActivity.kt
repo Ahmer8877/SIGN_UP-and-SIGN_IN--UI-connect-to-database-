@@ -48,6 +48,7 @@ class ContactActivity : AppCompatActivity() {
             database.child(phone).setValue(contractdata).
             //if app runs to execute this code
             addOnSuccessListener {
+                emailinput.text?.clear()
                 //show the customised alert box
                 dialog.show()
             //success toast

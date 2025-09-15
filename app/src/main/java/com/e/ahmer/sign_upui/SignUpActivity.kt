@@ -29,16 +29,16 @@ class SignUpActivity : AppCompatActivity() {
     // text input layouts code
 
         val userid=findViewById<TextInputEditText>(R.id.line1)
-        val email=findViewById<TextInputEditText>(R.id.line2)
-        val password=findViewById<TextInputEditText>(R.id.line3)
+        val etemail=findViewById<TextInputEditText>(R.id.line2)
+        val etpassword=findViewById<TextInputEditText>(R.id.line3)
 
 
         //signupbtn performance code
 
         signupbtn.setOnClickListener {
             val uniqueId= userid.text.toString()
-            val email=email.text.toString()
-            val password=password.text.toString()
+            val email=etemail.text.toString()
+            val password=etpassword.text.toString()
 
             //data class object
 
@@ -51,6 +51,9 @@ class SignUpActivity : AppCompatActivity() {
 
             //gets the id user and taost toast the msg success or failure
             database.child(uniqueId).setValue(User).addOnSuccessListener {
+                etemail.text?.clear()
+                etpassword.text?.clear()
+
                 Toast.makeText(this, "user registered", Toast.LENGTH_SHORT).show()
             }.addOnFailureListener {
                 Toast.makeText(this,"Failure", Toast.LENGTH_SHORT).show()
